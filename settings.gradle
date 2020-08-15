@@ -1,0 +1,2 @@
+include ':module_grayscale'
+include ':app'

@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('/Users/mac/Desktop/shuai_sign')
+            storePassword 'shuai1234'
+            keyAlias 'key0'
+            keyPassword 'shuai1234'
+        }
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.android.NBZxing"
+        minSdkVersion 17
+        targetSdkVersion 29
+        versionCode 9
+        versionName "1.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+//    implementation project(path: ':module_camera')
+    api "androidx.appcompat:appcompat:1.1.0"
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    implementation 'com.github.ailiwean:NBZxing:0.0.25'
+//    api 'com.google.zxing:core:3.3.3'
+    //   implementation 'me.devilsen:czxing:1.0.11'
+
+}
