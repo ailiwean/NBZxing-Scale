@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.<CusZxingView>findViewById(R.id.zxingview)
-                .synchLifeStart(this);
 
 //        ZxingFragment fragment = new ZxingFragment();
 //        getSupportFragmentManager().beginTransaction()
@@ -24,13 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
-                String path = Matisse.obtainPathResult(data).get(0);
-                this.<CusZxingView>findViewById(R.id.zxingview).toParse(path);
-            }
-        }
-
     }
 
 }
