@@ -35,10 +35,10 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':module_grayscale')
+//    implementation project(path: ':module_grayscale')
     api "androidx.appcompat:appcompat:1.1.0"
     implementation 'com.zhihu.android:matisse:0.5.3-beta3'
-    implementation 'com.github.ailiwean:NBZxing:0.0.25'
+    implementation 'com.github.ailiwean:NBZxing:0.0.26'
 //    api 'com.google.zxing:core:3.3.3'
     //   implementation 'me.devilsen:czxing:1.0.11'
 
