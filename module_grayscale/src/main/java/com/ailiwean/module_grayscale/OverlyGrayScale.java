@@ -5,7 +5,7 @@ import android.graphics.Rect;
 /**
  * @Package: com.ailiwean.module_grayscale
  * @ClassName: OverlyGrayScale
- * @Description: 叠加操作
+ * @Description:
  * @Author: SWY
  * @CreateDate: 2020/9/13 7:38 PM
  */
